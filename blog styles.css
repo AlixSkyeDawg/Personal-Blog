@@ -1,18 +1,33 @@
 /*Start CSS Coding*/
 
-/*Header*/
+/*Universal Style*/
 
 *{
     box-sizing: border-box;
 }
 
+
+/*Grid Style*/
+
 .container{
     border: 1px solid black;
-    height:95vh;
+    height: 95vh;
+    width: 95vw;
+    display: grid;
+    background-color: lightgoldenrodyellow;
+    grid-template-columns: 50px repeat(7, 1fr);
+    grid-template-rows: 100px 400px 1fr;
+    grid-template-areas:
+    "hd hd hd hd hd hd hd hd"
+    "sd sd main main main main main main"
+    "ft ft ft ft ft ft ft ft";
 }
 
+
+/*Header*/
+
 header{
-    border: 1px solid darkgreen;
+    border: 2px solid darkgreen;
     grid-area: hd;
 }
 
@@ -21,7 +36,6 @@ h1{
 }
 
 nav{
-    display: grid;
     border: 1px solid darkgoldenrod;
 }
 
@@ -62,6 +76,9 @@ h2{
     border: 1px solid black;
 }
 
+
+/*Footer*/
+
 footer{
     border: 2px solid brown;
     grid-area: ft;
@@ -78,9 +95,8 @@ p{
 
 /*Media Queries*/
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 480px) {
     .container{
-        display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
         grid-template-areas: 
@@ -91,9 +107,8 @@ p{
     }
 }
 
-@media screen and (min-width: 600px) and (max-width: 900px) {
+@media screen and (min-width: 481px) and (max-width: 900px) {
     .container{
-        display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: auto;
         grid-template-areas: 
@@ -105,7 +120,6 @@ p{
 
 @media screen and (min-width: 901px) {
     .container{
-        display: grid;
         grid-template-columns: repeat(8, 1fr);
         grid-template-rows: auto;
         grid-template-areas:
