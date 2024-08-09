@@ -8,12 +8,12 @@
 
 .container{
     border: 1px solid black;
-    display:grid;
     height:95vh;
 }
 
 header{
     border: 1px solid darkgreen;
+    grid-area: hd;
 }
 
 h1{
@@ -38,6 +38,7 @@ main{
 
 aside{
     border: 2px solid purple;
+    grid-area: sd;
 }
 
 h3{
@@ -50,6 +51,7 @@ h3{
 
 article{
     border: 2px solid blueviolet;
+    grid-area: main;
 }
 
 .content{
@@ -62,6 +64,7 @@ h2{
 
 footer{
     border: 2px solid brown;
+    grid-area: ft;
 }
 
 p{
@@ -92,7 +95,7 @@ p{
     .container{
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(4, 1fr);
+        grid-template-rows: auto;
         grid-template-areas: 
         "hd hd hd hd"
         "sd main main main"
@@ -104,7 +107,7 @@ p{
     .container{
         display: grid;
         grid-template-columns: repeat(8, 1fr);
-        grid-template-rows: repeat(8, 1fr);
+        grid-template-rows: auto;
         grid-template-areas:
         "hd hd hd hd hd hd hd hd"
         "sd sd main main main main main main"
