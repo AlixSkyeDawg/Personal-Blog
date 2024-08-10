@@ -5,49 +5,50 @@
     <title>Personal Blog 2</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Alix Jackson">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="blog styles 2.css">
 </head>
 <body>
-    <div class="container">
+    <div id="parent">
         <header>
-            <div class="head box">
-                <nav>
-                    <ul>
-                        <li class="navigation"><a href="">About</a></li>
-                        <li class="navigation"><a href="">Contact</a></li>
-                        <li class="navigation"><a href="">Subscribe</a></li>
-                        <li class="navigation"><a href="">Blog</a></li>
-                    </ul>
-                </nav>
+            <nav id="navbar">
+                <ul id="navlinks">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Connect</a></li>
+                </ul>
+            </nav>
+            
+            <div id="hero-image">
+                <div id="hero-text">
+                    <h1>The Wonderful World of Cats!</h1>
+                    <p>Get in here right meow!</p>
+                    <button>Purr!</button>
+                </div>
             </div>
         </header>
+
+        <main>
+            <div class="blog-card">
+                <img src="#" alt="A cute black and white kitten playing with a flower">
+                <div class="card-label">
+                    <h3>Random Text Here</h3>
+                    <h4>Random Date Here</h4>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <img src="#" alt="A moody picture of a cat in blue and orange lighting">
+                <div class="card-label">
+                    <h3>Random Text Here</h3>
+                    <h4>Random Date Here</h4>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Keep your friends close and your kitties closer!</p>
+        </footer>
     </div>
-
-    <main>
-        <div class="sidebar box">
-            <aside>
-                <h3>I'm a sidebar!</h3>
-                <ul>
-                    <li class="sidenav"><a href="blog post.html">Post</a></li>
-                    <li class="sidenav"><a href="This">This</a></li>
-                    <li class="sidenav"><a href="List">List</a></li>
-                </ul>
-            </aside>            
-        </div>
-
-        <div class="content box">
-            <h2>I'm an article about cats!</h2>
-            <img src="/assets/cat yellow.jpg" alt="Pretty Cat with Yellow Eyes">
-        </div>
-
-        <div class="footer box">
-            <p>Check Out More Here!</p>
-            <ul>
-                <li class="footnav"><a href="">Link</a></li>
-                <li class="footnav"><a href="">Link</a></li>
-                <li class="footnav"><a href="">Link</a></li>
-            </ul>
-        </div>
-    </main>
 </body>
 </html>
