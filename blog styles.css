@@ -11,8 +11,8 @@
 
 .container{
     border: 1px solid black;
-    height: 95vh;
-    width: 95vw;
+    /*height: 95vh;*/
+    /*width: 95vw;*/
     display: grid;
     background-color: lightgoldenrodyellow;
     grid-template-columns: 50px repeat(7, 1fr);
@@ -48,6 +48,7 @@ nav{
 
 main{
     border: 2px solid darkred;
+    grid-area: main;
 }
 
 aside{
@@ -65,7 +66,6 @@ h3{
 
 article{
     border: 2px solid blueviolet;
-    grid-area: main;
 }
 
 .content{
