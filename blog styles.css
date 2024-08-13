@@ -31,10 +31,6 @@ header{
     grid-area: hd;
 }
 
-h1{
-    border: 1px solid black;
-}
-
 nav{
     border: 1px solid darkgoldenrod;
 }

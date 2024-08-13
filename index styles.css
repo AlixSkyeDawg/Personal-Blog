@@ -1,0 +1,200 @@
+/*CSS Coding Start*/
+
+/*Universal Styles*/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    width: 100%;
+}
+
+/*Grid Layout Styles*/
+
+#parent{
+    border: 1px solid black;
+    display: grid;
+    background-color: lightgoldenrodyellow;
+    grid-template-columns: 50px repeat(7, 1fr);
+    grid-template-rows: 100px 400px 1fr;
+    grid-template-areas:
+    "hd hd hd hd hd hd hd hd"
+    "sd sd main main main main main main"
+    "ft ft ft ft ft ft ft ft";
+}
+
+/*Header Styles*/
+
+header{
+    border: 1px solid blue;
+    grid-area: hd;
+}
+
+#navbar{
+    border: 1px solid darkgoldenrod;
+    text-align: center;
+}
+
+#navlinks{
+    border: 1px solid green;
+    list-style-type: none;
+    margin: 0;
+    padding: 15px;
+}
+
+.navigation{
+    display: inline;
+}
+
+#hero-image{
+    border: 1px solid darkolivegreen;
+    background-image: linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/assets/cat\ spring.jpg);
+    background-size: cover;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+#hero-text{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid slateblue;
+    height: auto;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    margin-top: 200px;
+}
+
+/*h1*/
+/*h4*/
+/*button*/
+
+/*Body Styles*/
+
+main{
+    border: 2px solid darkred;
+    grid-area: main;
+}
+
+main::after{
+    content:"";
+    display: grid;
+    clear: both;
+}
+
+#sidebar{
+    border: 2px solid darkorchid;
+    grid-area: sd;
+}
+
+#sidenav{
+    padding: 0;
+}
+
+.sidenavlinks{
+    border: 1px solid salmon;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+article{
+    border: 1px solid plum;
+}
+
+#card-column{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+}
+
+#first-card{
+    border: 1px solid purple;
+    padding: 10px;
+    margin: 15px;
+    border-radius: 5%;
+}
+
+#second-card{
+    border: 1px solid purple;
+    padding: 10px;
+    margin: 15px;
+    border-radius: 5%;
+}
+
+.card-label{
+    border: 1px solid brown;
+}
+
+/*Footer Styles*/
+
+footer{
+    border: 2px solid darkcyan;
+    grid-area: ft;
+    padding: 0;
+    margin: o;
+    text-align: center;
+}
+
+p{
+    padding: 0;
+    margin: 0;
+}
+
+#footnav{
+    padding: 0;
+    margin: 0;
+}
+
+.footnavlinks{
+    border: 1px solid orangered;
+    list-style-type: none;
+    display: inline;
+}
+
+/*Media Queries*/
+
+@media screen and (max-width: 480px) {
+    #parent{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "hd"
+        "sd"
+        "main"
+        "ft";
+    }
+
+    #hero-image{
+        background-size: cover;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 900px) {
+    #parent{
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "hd hd hd hd"
+        "sd main main main"
+        "ft ft ft ft";
+    }
+}
+
+@media screen and (min-width: 901px) {
+    #parent{
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas:
+        "hd hd hd hd hd hd hd hd"
+        "sd sd main main main main main main"
+        "ft ft ft ft ft ft ft ft";
+    }
+}
