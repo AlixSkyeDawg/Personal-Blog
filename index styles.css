@@ -15,7 +15,7 @@ body{
 /*Grid Layout Styles*/
 
 #parent{
-    border: 1px solid black;
+    /*border: 1px solid black;*/
     display: grid;
     background-color: #f5f5f5;
     grid-template-columns: 50px repeat(7, 1fr);
@@ -29,7 +29,7 @@ body{
 /*Header Styles*/
 
 header{
-    border: 1px solid blue;
+    /*border: 1px solid blue;*/
     grid-area: hd;
 }
 
@@ -39,7 +39,7 @@ header{
 }
 
 #navlinks{
-    border: 1px solid green;
+    /*border: 1px solid green;*/
     background-color: #bcd2ee;
     list-style-type: none;
     margin: 0;
@@ -53,7 +53,7 @@ header{
     border-style: double;
     padding: 10px;
     margin: 7px;
-    font-family: Raleway, Arial, sans-serif;
+    font-family: "Raleway", sans-serif;
     font-size: small;
     font-weight: 600;
     transition-duration: 200ms;
@@ -72,13 +72,12 @@ a{
 }
 
 a:hover{
-    text-decoration: none;
     color: #f5f5f5;
     letter-spacing: 0.1rem;
 }
 
 #hero-image{
-    border: 1px solid darkolivegreen;
+    /*border: 1px solid darkolivegreen;*/
     background-image: linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/assets/cat\ spring.jpg);
     background-size: cover;
     height: 500px;
@@ -89,7 +88,7 @@ a:hover{
 }
 
 #hero-text{
-    border: 1px solid slateblue;
+    /*border: 1px solid slateblue;*/
     height: auto;
     width: 100%;
     text-align: center;
@@ -99,14 +98,14 @@ a:hover{
 }
 
 h1{
-    font-family: "Patrick Hand", Helvetica, sans-serif;
+    font-family: "Patrick Hand", sans-serif;
     font-size: 48px;
     color: #f5f5f5;
     margin: 5px auto;
     padding: 10px;
 }
 h4{
-    font-family: Raleway, Arial, sans-serif;
+    font-family: "Raleway", sans-serif;
     font-weight: 200;
     color: #f5f5f5;
     font-size: 20px;
@@ -121,7 +120,7 @@ button{
     border-style: double;
     border-color: #f5f5f5;
     transition-duration: 0.4s;
-    font-family: Raleway, sans-serif;
+    font-family: "Raleway", sans-serif;
     font-size: 15px;
     font-weight: 600;
     color:#f5f5f5;
@@ -136,12 +135,12 @@ button:hover{
 /*Body Styles*/
 
 main{
-    border: 2px solid darkred;
+    /*border: 2px solid darkred;*/
     grid-area: main;
 }
 
 #sidebar{
-    border: 2px solid darkorchid;
+    /*border: 2px solid darkorchid;*/
     grid-area: sd;
     background-color: #9b7ede;
     padding: 15px;
@@ -149,7 +148,7 @@ main{
 }
 
 h2{
-    font-family: Raleway, Helvetica, sans-serif;
+    font-family: "Raleway", sans-serif;
     font-size: 2rem;
     color: #f5f5f5;
     text-align: center;
@@ -179,7 +178,7 @@ h2{
 }
 
 article{
-    border: 4px double #f5f5f5;
+    border-width: 4px;
     background-color: #832161;
 }
 
@@ -262,16 +261,20 @@ h5{
 /*Footer Styles*/
 
 footer{
-    border: 2px solid darkcyan;
+    background-color: #141414;
     grid-area: ft;
     padding: 15px;
-    margin: 15px 0;
+    margin: 0;
     text-align: center;
 }
 
 p{
     padding: 0;
     margin: 0;
+    font-family: "Patrick Hand", sans-serif;
+    color: #f5f5f5;
+    font-size: x-large;
+    cursor: default;
 }
 
 #footnav{
@@ -280,9 +283,29 @@ p{
 }
 
 .footnavlinks{
-    border: 1px solid orangered;
+    border-top: double;
+    border-bottom: double;
+    border-width: 4px;
+    border-color: #832161;
     list-style-type: none;
     display: inline;
+    font-family: "Raleway", sans-serif;
+    font-size: medium;
+    font-weight: 500;
+    margin: 0 10px;
+}
+
+.links{
+    color:#832161;
+    transition-duration: 200ms;
+    padding: 0 20px;
+}
+
+.links:hover{
+    color: #f5f5f5;
+    letter-spacing: 0.1rem;
+    background-color: #832161;
+    padding: 0 20px;
 }
 
 /*Media Queries*/

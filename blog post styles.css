@@ -1,0 +1,260 @@
+/*CSS Coding Start*/
+
+@import url(https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap);
+
+/*Universal Styles*/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    width: 100%;
+}
+
+/*Grid Layout Styles*/
+
+#parent{
+    /*border: 1px solid black;*/
+    display: grid;
+    background-color: #f5f5f5;
+    grid-template-columns: 50px repeat(7, 1fr);
+    grid-template-rows: 100px 400px 1fr;
+    grid-template-areas:
+    "hd hd hd hd hd hd hd hd"
+    "sd sd main main main main main main"
+    "ft ft ft ft ft ft ft ft";
+}
+
+/*Header Styles*/
+
+header{
+    border: 1px solid blue;
+    grid-area: hd;
+}
+
+#navbar{
+    border: 1px solid purple;
+    text-align: center;
+}
+
+#navlinks{
+    border: 1px solid crimson;
+    background-color: #bcd2ee;
+    list-style-type: none;
+    margin: 0;
+    padding: 15px;
+}
+
+.navigation{
+    display: inline-flex;
+    border-width: 4px;
+    border-color: #832161;
+    border-style: double;
+    padding: 10px;
+    margin: 7px;
+    font-family: "Raleway", sans-serif;
+    font-size: small;
+    font-weight: 600;
+    transition-duration: 200ms;
+}
+
+.navigation:hover{
+    border-color: #bcd2ee;
+    border-width: 2px;
+    background-color: #832161;
+}
+
+a{
+    text-decoration: none;
+    color: #141414;
+    transition-duration: 200ms;
+}
+
+a:hover{
+    color: #f5f5f5;
+    letter-spacing: 0.1rem;
+}
+
+#half-hero{
+    border: 1px solid green;
+    background-image: linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/assets/cat\ grass.jpg);
+    background-size: cover;
+    height: 250px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+#hero-text{
+    border: 1px solid greenyellow;
+}
+
+/*h1*/
+
+
+/*Body Styles*/
+
+#sidebar{
+    border: 1px solid red;
+    grid-area: sd;
+    background-color: #9b7ede;
+    padding: 15px;
+    transition-duration: 200ms;
+}
+
+h2{
+    font-family: "Raleway", sans-serif;
+    font-size: 2rem;
+    color: #f5f5f5;
+    text-align: center;
+    border-top: double;
+    border-bottom: double;
+    border-color: #f5f5f5;
+    border-width: 4px;
+    cursor: default;
+    margin: 25px auto 50px;
+}
+
+#sidenav{
+    border: 1px solid darkcyan;
+    padding: 0;
+}
+
+.sidenavlinks{
+    border-top: double;
+    border-bottom: double;
+    border-color: #f5f5f5;
+    border-width: 4px;
+    list-style-type: none;
+    margin: 20px;
+    padding: 10px;
+    font-family: "Patrick Hand", sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+main{
+    grid-area: main;
+}
+
+article{
+    border: 1px solid olivedrab;
+    background-color: #832161;
+}
+
+h3{
+    padding: 15px;
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+    font-size: 2rem;
+    color: #f5f5f5;
+    font-weight: 400;
+    cursor: default;
+}
+
+#content{
+    border: 1px solid salmon;
+}
+
+#author-photo{
+    border: 1px solid brown;
+}
+
+#blog{
+    border: 1px solid grey;
+}
+
+/*#blog-content*/
+
+
+/*Footer Styles*/
+
+footer{
+    background-color: #141414;
+    grid-area: ft;
+    padding: 15px;
+    margin: 0;
+    text-align: center;
+}
+
+p{
+    padding: 0;
+    margin: 0;
+    font-family: "Patrick Hand", sans-serif;
+    color: #f5f5f5;
+    font-size:x-large;
+    cursor: default;
+}
+
+#footnav{
+    border: 1px solid seagreen;
+    padding: 10px;
+    margin: 0;
+}
+
+.footnavlinks{
+    border-top: double;
+    border-bottom: double;
+    border-width: 4px;
+    border-color: #832161;
+    list-style-type: none;
+    display: inline;
+    font-family: "Raleway", sans-serif;
+    font-size: medium;
+    font-weight: 500;
+    margin: 0 10px;
+}
+
+.links{
+    border: 1px solid slateblue;
+    color: #832161;
+    transition-duration: 200ms;
+    padding: 0 20px;
+}
+
+.links:hover{
+    color: #f5f5f5;
+    letter-spacing: 0.1rem;
+    background-color: #832161;
+    padding: 0 20px;
+}
+
+/*Media Queries*/
+
+@media screen and (max-width: 480px) {
+    #parent{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "hd"
+        "sd"
+        "main"
+        "ft";
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 900px) {
+    #parent{
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "hd hd hd hd"
+        "sd main main main"
+        "ft ft ft ft";
+    }
+}
+
+@media screen and (min-width: 901px) {
+    #parent{
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas:
+        "hd hd hd hd hd hd hd hd"
+        "sd sd main main main main main main"
+        "ft ft ft ft ft ft ft ft";
+    }
+}
