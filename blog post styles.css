@@ -181,6 +181,13 @@ h3{
     background-repeat: no-repeat;
 }
 
+figcaption{
+    font-family: "Raleway", sans-serif;
+    text-align: center;
+    font-weight: 700;
+    font-size: small;
+}
+
 #info{
     grid-area: info;
     margin: 5px;
@@ -193,6 +200,13 @@ h3{
     font-size: 17px;
     color: #141414;
     padding: 5px;
+}
+
+blockquote{
+    font-family: "Raleway", sans-serif;
+    text-align: center;
+    font-weight: 700;
+    font-size: small;
 }
 
 ul{
