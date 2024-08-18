@@ -11,13 +11,13 @@
 }
 
 body{
+    cursor: url(http://www.zingerbugimages.com/cursors/tuxedo_cat.ani), url(http://www.zingerbug.com/cursors/cursors/tuxedo_cat.gif), progress !important;
     width: 100%;
 }
 
 /*Grid Layout Styles*/
 
 #parent{
-    /*border: 1px solid black;*/
     display: grid;
     background-color: #f5f5f5;
     grid-template-columns: 50px repeat(7, 1fr);
@@ -31,17 +31,14 @@ body{
 /*Header Styles*/
 
 header{
-    border: 1px solid blue;
     grid-area: hd;
 }
 
 #navbar{
-    border: 1px solid purple;
     text-align: center;
 }
 
 #navlinks{
-    border: 1px solid crimson;
     background-color: #bcd2ee;
     list-style-type: none;
     margin: 0;
@@ -79,8 +76,7 @@ a:hover{
 }
 
 #half-hero{
-    border: 1px solid green;
-    background-image: linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/assets/cat\ grass.jpg);
+    background-image: linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(assets/cat\ basket.jpg);
     background-size: cover;
     height: 250px;
     background-repeat: no-repeat;
@@ -90,16 +86,25 @@ a:hover{
 }
 
 #hero-text{
-    border: 1px solid greenyellow;
+    height: auto;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    position: absolute;
+    margin: 20px 0;
 }
 
-/*h1*/
-
+h1{
+    font-family: "Patrick Hand", sans-serif;
+    font-size: 48px;
+    color: #f5f5f5;
+    margin: 5px;
+    padding: 10px;
+}
 
 /*Body Styles*/
 
 #sidebar{
-    border: 1px solid red;
     grid-area: sd;
     background-color: #9b7ede;
     padding: 15px;
@@ -115,12 +120,10 @@ h2{
     border-bottom: double;
     border-color: #f5f5f5;
     border-width: 4px;
-    cursor: default;
     margin: 25px auto 50px;
 }
 
 #sidenav{
-    border: 1px solid darkcyan;
     padding: 0;
 }
 
@@ -142,7 +145,6 @@ main{
 }
 
 article{
-    border: 1px solid olivedrab;
     background-color: #832161;
 }
 
@@ -153,22 +155,90 @@ h3{
     font-size: 2rem;
     color: #f5f5f5;
     font-weight: 400;
-    cursor: default;
 }
 
 #content{
-    border: 1px solid salmon;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+    "img info"
+    "blog blog";
+    justify-items: center;
 }
 
 #author-photo{
-    border: 1px solid brown;
+    grid-area: img;
+    margin: 5px;
+    border-width: 4px;
+    border-color: #bcd2ee;
+    border-style: inset;
+    height: 250px;
+    width: 250px;
+    background-image: url(assets/alix\ photo.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#info{
+    grid-area: info;
+    margin: 5px;
+    border-width: 4px;
+    border-color: #bcd2ee;
+    border-style: inset;
+    height: 250px;
+    width: 250px;
+    font-family: "Raleway", sans-serif;
+    font-size: 17px;
+    color: #141414;
+    padding: 5px;
+}
+
+ul{
+    padding: 0;
+    align-items: center;
+}
+
+li{
+    list-style-type: none;
+    text-align: center;
+    padding: 5px;
+}
+
+.name{
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.title{
+    font-size: 15px;
+    font-style: italic;
+}
+
+.company{
+    font-size: 17px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.bio{
+    font-size: 17px;
+    font-style: italic;
 }
 
 #blog{
-    border: 1px solid grey;
+    margin: 5px;
+    grid-area: blog;
 }
 
-/*#blog-content*/
+#blog-content{
+    color: #141414;
+    text-align: justify;
+    font-size: 25px;
+    margin: 5px;
+}
 
 
 /*Footer Styles*/
@@ -187,11 +257,9 @@ p{
     font-family: "Patrick Hand", sans-serif;
     color: #f5f5f5;
     font-size:x-large;
-    cursor: default;
 }
 
 #footnav{
-    border: 1px solid seagreen;
     padding: 10px;
     margin: 0;
 }
@@ -206,11 +274,11 @@ p{
     font-family: "Raleway", sans-serif;
     font-size: medium;
     font-weight: 500;
-    margin: 0 10px;
+    margin: 10px;
+    padding: 0;
 }
 
 .links{
-    border: 1px solid slateblue;
     color: #832161;
     transition-duration: 200ms;
     padding: 0 20px;
@@ -235,6 +303,15 @@ p{
         "main"
         "ft";
     }
+
+    #content{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "img"
+        "info"
+        "blog";
+    }
 }
 
 @media screen and (min-width: 481px) and (max-width: 900px) {
@@ -246,7 +323,17 @@ p{
         "sd main main main"
         "ft ft ft ft";
     }
+
+    #content{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "img"
+        "info"
+        "blog";
+    }
 }
+
 
 @media screen and (min-width: 901px) {
     #parent{
@@ -256,5 +343,13 @@ p{
         "hd hd hd hd hd hd hd hd"
         "sd sd main main main main main main"
         "ft ft ft ft ft ft ft ft";
+    }
+
+    #content{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: 
+        "img info"
+        "blog blog";
     }
 }
