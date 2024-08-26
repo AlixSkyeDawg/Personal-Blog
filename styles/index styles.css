@@ -1,6 +1,6 @@
-@import url("header_styles.css");
-@import url("body_styles.css");
-@import url("footer_styles.css");
+@import url("/styles/header_styles.css");
+@import url("/styles/body_styles.css");
+@import url("/styles/footer_styles.css");
 @import url(https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap);
 

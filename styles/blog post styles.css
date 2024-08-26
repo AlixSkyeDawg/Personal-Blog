@@ -76,7 +76,7 @@ a:hover{
 }
 
 #half-hero{
-    background-image: linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(assets/cat\ basket.jpg);
+    background-image: linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/assets/cat\ basket.jpg);
     background-size: cover;
     height: 250px;
     background-repeat: no-repeat;
@@ -175,7 +175,7 @@ h3{
     border-style: inset;
     height: 250px;
     width: 250px;
-    background-image: url(assets/alix\ photo.jpg);
+    background-image: url(/assets/alix\ photo.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
