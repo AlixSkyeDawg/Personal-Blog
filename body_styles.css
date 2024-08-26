@@ -75,7 +75,7 @@ h3{
     height: 250px;
     width: 300px;
     border-radius: 5%;
-    background-image: url(/assets/cat\ flower.jpg);
+    background-image: url(assets/cat_flower.jpg);
     background-repeat: no-repeat;
     background-size: auto 250px;
     background-position: center;
@@ -94,7 +94,7 @@ h3{
     height: 250px;
     width: 300px;
     border-radius: 5%;
-    background-image: url(/assets/cat\ yawn.jpg);
+    background-image: url(assets/cat_yawn.jpg);
     background-repeat: no-repeat;
     background-size: 300px auto;
     background-position: center;

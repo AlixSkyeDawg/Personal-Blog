@@ -47,7 +47,7 @@ a:hover{
 }
 
 #hero-image{
-    background-image: linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/assets/cat\ spring.jpg);
+    background-image: linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(assets/cat_spring.jpg);
     background-size: cover;
     height: 500px;
     background-repeat: no-repeat;
